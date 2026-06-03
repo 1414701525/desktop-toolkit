@@ -1,0 +1,46 @@
+# Build artifacts
+build/
+dist/
+bin/
+obj/
+*.exe
+*.dll
+*.pdb
+*.cache
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.eggs/
+venv/
+.venv/
+
+# IDE
+.vs/
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment
+.env
+.env.local
+
+# Publish output
+publish/
+
+# NuGet
+*.nupkg
+packages/
+
+# Logs
+*.log
