@@ -1,32 +1,32 @@
-# 桌面小猫
+# Desktop Cat
 
-一个无边框、透明背景的桌面宠物猫，会在屏幕上自由散步、发呆、睡觉。
+A borderless, transparent-background desktop pet that wanders across the screen, dozes off, and responds to interaction.
 
-## 运行
+## Run
 
 ```bash
 python desktop_cat.py
 ```
 
-## 交互方式
+## Interactions
 
-- **左键单击**：摸摸小猫
-- **左键拖动**：移动小猫位置
-- **左键双击**：切换自动散步 / 原地待着
-- **右键菜单**：喂小鱼干、让它睡觉、说句话、退出
+- **Left click** — Pet the cat
+- **Left drag** — Move the cat
+- **Left double-click** — Toggle auto-walk / stay put
+- **Right-click menu** — Feed fish, put to sleep, say something, quit
 
-## 状态机
+## State Machine
 
-- `walk`：随机散步，碰到屏幕边缘转向
-- `idle`：原地发呆
-- `sleep`：睡觉，显示 Zzz 动画
-- `stretch`：伸懒腰
-- `happy`：被摸/喂食后的开心状态，显示爱心/小鱼干动画
+- `walk` — Random roaming, reverses at screen edges
+- `idle` — Standing still
+- `sleep` — Sleeping with Zzz animation
+- `stretch` — Stretching
+- `happy` — Post-pet/feed state with heart / fish animations
 
-## 技术实现
+## Implementation
 
-- `overrideredirect(True)` + `transparentcolor` 实现无边框透明窗口
-- Canvas 自绘猫体：身体、头部、耳朵、眼睛（含眨眼）、尾巴（含摆动）、胡须、腮红
-- 正弦函数驱动呼吸、走路、尾巴摆动动画
-- 状态切换使用加权随机选择
-- 气泡对话框 + 爱心/小鱼干粒子效果
+- `overrideredirect(True)` + `transparentcolor` for borderless transparent window
+- Canvas-drawn cat: body, head, ears, eyes (with blink), tail (with swing), whiskers, blush
+- Sine-wave driven breathing, walking bob, and tail swing animations
+- Weighted random state transitions
+- Speech bubble + heart / fish particle effects

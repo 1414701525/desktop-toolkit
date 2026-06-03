@@ -1,31 +1,31 @@
 # Roadmap
 
-## 已完成
+## Done
 
-- [x] AwakeLite C# 版本：完整功能（定时模式、托盘、开机自启、自绘控件）
-- [x] Awake Python 版本：防休眠 + 托盘 + 全局热键
-- [x] 反应力挑战游戏：30 秒计时 + 连击系统 + 分数评价
-- [x] 躲避游戏：障碍物 + 金币 + 护盾 + 难度递增
-- [x] 桌面小猫：散步/睡觉/互动状态机 + Canvas 动画
-- [x] 苏州餐厅选择器：多维筛选 + 随机推荐 + 历史记录
+- [x] AwakeLite C# — Full feature set (timer modes, tray, startup, custom controls)
+- [x] Awake Python — Anti-sleep + tray + global hotkey
+- [x] Reaction game — 30s timer, combo system, score rating
+- [x] Dodge game — Obstacles, coins, shields, progressive difficulty
+- [x] Desktop cat — Walk/sleep/interact state machine with Canvas animation
+- [x] Food picker — Multi-filter, random selection, history
 
-## 近期计划
+## Near-Term
 
-- [ ] AwakeLite：支持自定义主题颜色
-- [ ] AwakeLite：添加定时结束通知（Windows Toast）
-- [ ] 桌面小猫：增加更多互动动作（追鼠标、爬窗口边缘）
-- [ ] 躲避游戏：添加排行榜（本地持久化）
-- [ ] 餐厅选择器：支持用户自定义餐厅数据文件
+- [ ] AwakeLite: Custom theme color support
+- [ ] AwakeLite: Windows Toast notification on timer expiry
+- [ ] Desktop cat: More interactions (chase mouse, climb window edges)
+- [ ] Dodge game: Local high-score leaderboard
+- [ ] Food picker: User-editable restaurant data file
 
-## 中期计划
+## Mid-Term
 
-- [ ] 统一打包脚本：一键构建所有项目的安装包
-- [ ] 添加单元测试框架（Python `unittest` / C# xUnit）
-- [ ] 反应力游戏：添加在线排行榜（可选后端）
-- [ ] 桌面小猫：支持多宠物同时运行
+- [ ] Unified build script — one-click packaging for all projects
+- [ ] Unit test framework (Python `unittest` / C# xUnit)
+- [ ] Reaction game: Optional online leaderboard
+- [ ] Desktop cat: Multiple pets running simultaneously
 
-## 长期愿景
+## Long-Term
 
-- [ ] 跨平台支持：探索 macOS / Linux 兼容方案
-- [ ] 插件系统：允许用户编写自定义桌面小工具
-- [ ] 社区餐厅数据：众包更新餐厅信息
+- [ ] Cross-platform support — explore macOS / Linux compatibility
+- [ ] Plugin system — allow users to write custom desktop widgets
+- [ ] Community restaurant data — crowd-sourced updates

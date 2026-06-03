@@ -1,35 +1,35 @@
-# 躲避小游戏
+# Dodge Game
 
-一个 tkinter 躲避类游戏：操控方块躲避红色障碍物，收集黄色金币和蓝色护盾。
+A tkinter dodge game: steer a blue square to avoid red obstacles, collect yellow coins, and pick up blue shields.
 
-## 运行
+## Run
 
 ```bash
 python dodge.py
 ```
 
-## 操作
+## Controls
 
-- WASD 或方向键移动
-- 空格开始游戏
-- P 暂停/继续
+- WASD or Arrow Keys to move
+- Space to start
+- P to pause / resume
 
-## 游戏元素
+## Game Elements
 
-- 🔴 红色障碍物：碰到扣 1 点生命
-- 🟡 黄色金币：收集加 10 分
-- 🔵 蓝色护盾：可抵挡一次伤害
-- 生命值：3 点，归零游戏结束
+- 🔴 Red obstacle — lose 1 life on hit
+- 🟡 Yellow coin — +10 points
+- 🔵 Blue shield — blocks one hit
+- 3 lives total; game over when all lost
 
-## 难度机制
+## Difficulty Curve
 
-- 障碍物生成速度随时间加快
-- 障碍物下落速度随时间增加
-- 最终分数 = 收集分数 + 存活时间
+- Spawn rate increases over time
+- Fall speed increases over time
+- Final score = coins collected + survival time
 
-## 技术实现
+## Implementation
 
-- 碰撞检测：AABB 矩形重叠判断
-- 难度曲线：`min(8, elapsed / 12)` 控制生成间隔和速度
-- 随机权重：障碍物 72%、金币 22%、护盾 6%
-- 屏幕闪烁反馈受伤/拾取
+- AABB rectangle overlap for collision detection
+- Difficulty curve: `min(8, elapsed / 12)` controls spawn interval and speed
+- Weighted random: obstacles 72%, coins 22%, shields 6%
+- Screen flash feedback on hit / pickup

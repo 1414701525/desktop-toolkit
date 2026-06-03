@@ -1,24 +1,24 @@
-# 30 秒反应力挑战
+# 30-Second Reaction Challenge
 
-一个简单的 tkinter 点击小游戏：30 秒内尽可能多地点击随机出现的目标。
+A simple tkinter click game: tap as many randomly appearing targets as you can in 30 seconds.
 
-## 运行
+## Run
 
 ```bash
 python game.py
 ```
 
-## 规则
+## Rules
 
-- 目标随机出现在画布上
-- 点中目标得 1 分，连续点中增加连击数
-- 点错重置连击
-- 目标会随分数增加而变小
-- 30 秒后结算，根据分数给出评价
+- Targets appear at random positions on the canvas
+- Click a target to score +1 and increase your combo
+- Miss a click and the combo resets
+- Targets shrink as your score increases
+- After 30 seconds, a rating is shown based on your final score
 
-## 技术实现
+## Implementation
 
-- tkinter Canvas 自绘目标（双层圆形）
-- `root.after()` 驱动倒计时和动画
-- 浮动文字反馈（"+1" / "Miss"）
-- 距离检测判断点击命中
+- tkinter Canvas with dual-layer circle targets
+- `root.after()`-driven countdown and animation loop
+- Floating text feedback ("+1" / "Miss")
+- Distance-based hit detection

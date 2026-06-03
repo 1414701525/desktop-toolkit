@@ -1,63 +1,61 @@
 # Contributing
 
-欢迎贡献！以下是参与项目的基本流程。
+Contributions are welcome! Here's how to get started.
 
-## 如何贡献
+## How to Contribute
 
-1. Fork 本仓库
-2. 创建功能分支：`git checkout -b feature/your-feature`
-3. 提交更改：`git commit -m "Add your feature"`
-4. 推送分支：`git push origin feature/your-feature`
-5. 创建 Pull Request
+1. Fork this repository
+2. Create a feature branch: `git checkout -b feature/your-feature`
+3. Commit your changes: `git commit -m "Add your feature"`
+4. Push the branch: `git push origin feature/your-feature`
+5. Open a Pull Request
 
-## 开发环境
+## Development Setup
 
-### Python 项目
+### Python Projects
 
 ```bash
-# Python 3.10+ 推荐
+# Python 3.10+ recommended
 python --version
 
-# 安装依赖（仅 Awake 需要额外依赖）
+# Install dependencies (only Awake needs extras)
 pip install pystray pillow
 
-# 运行测试
+# Run tests
 python -m pytest tests/
 ```
 
-### C# 项目
+### C# Project
 
 ```powershell
-# 需要 .NET 8 SDK
+# Requires .NET 8 SDK
 dotnet --version
 
-# 运行
+# Run
 cd AwakeLite
 dotnet run
 
-# 发布
+# Publish
 dotnet publish -c Release -r win-x64 --self-contained true /p:PublishSingleFile=true
 ```
 
-## 代码规范
+## Code Style
 
 ### Python
 
-- 遵循 PEP 8
-- 使用类型注解（Type Hints）
-- 函数和类添加 docstring
-- 变量命名使用 snake_case
+- Follow PEP 8
+- Use type hints
+- Add docstrings to functions and classes
+- Use `snake_case` for variables and functions
 
 ### C#
 
-- 遵循 C# 编码规范
-- 使用 PascalCase 命名类和方法
-- 使用 camelCase 命名局部变量和参数
-- 添加 XML 文档注释
+- Follow C# coding conventions
+- Use `PascalCase` for classes and methods
+- Use `camelCase` for local variables and parameters
+- Add XML documentation comments
 
-## 提交规范
-
-提交信息格式：
+## Commit Convention
 
 ```
 <type>(<scope>): <subject>
@@ -67,41 +65,41 @@ dotnet publish -c Release -r win-x64 --self-contained true /p:PublishSingleFile=
 <footer>
 ```
 
-类型（type）：
-- `feat`：新功能
-- `fix`：修复 bug
-- `docs`：文档更新
-- `style`：代码格式调整
-- `refactor`：重构
-- `test`：添加测试
-- `chore`：构建/工具变更
+Types:
+- `feat` — New feature
+- `fix` — Bug fix
+- `docs` — Documentation update
+- `style` — Code formatting
+- `refactor` — Refactoring
+- `test` — Adding tests
+- `chore` — Build / tooling changes
 
-示例：
+Example:
 
 ```
-feat(awake-lite): 添加自定义主题颜色支持
+feat(awake-lite): add custom theme color support
 
-- 新增主题配置文件
-- 支持深色/浅色主题切换
-- 更新托盘图标颜色
+- Add theme config file
+- Support dark/light theme switching
+- Update tray icon colors
 
 Closes #12
 ```
 
-## 报告 Issue
+## Reporting Issues
 
-使用 GitHub Issues 报告 bug 或提出功能建议。请包含：
+Use GitHub Issues to report bugs or suggest features. Please include:
 
-- 问题描述
-- 复现步骤
-- 预期行为
-- 实际行为
-- 环境信息（OS 版本、Python/.NET 版本）
+- Description of the issue
+- Steps to reproduce
+- Expected behavior
+- Actual behavior
+- Environment (OS version, Python/.NET version)
 
-## Pull Request 检查清单
+## Pull Request Checklist
 
-- [ ] 代码符合项目规范
-- [ ] 添加了必要的注释和文档
-- [ ] 所有现有测试通过
-- [ ] 新功能包含测试
-- [ ] 更新了相关文档
+- [ ] Code follows project conventions
+- [ ] Comments and documentation added where needed
+- [ ] All existing tests pass
+- [ ] New features include tests
+- [ ] Related documentation updated

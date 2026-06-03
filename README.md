@@ -1,94 +1,91 @@
 # Desktop Toolkit
 
-一套基于 Python 和 C# 的 Windows 桌面小工具集合，涵盖系统 utility、桌面小游戏和生活辅助工具。
+A collection of lightweight Windows desktop utilities and games built with Python and C#. Covers system tools, mini-games, and everyday helpers — all designed to be small, self-contained, and easy to learn from.
 
-所有项目均为轻量级、无依赖或低依赖的桌面应用，适合学习 Windows 桌面开发、tkinter 自绘、WinForms 定制控件、系统 API 调用等场景。
+## Projects
 
-## 项目列表
+### System Utilities
 
-### 系统工具
+| Project | Language | Description |
+|---------|----------|-------------|
+| [AwakeLite](AwakeLite/) | C# .NET 8 | Anti-sleep tool with timer, system tray, and startup integration |
+| [Awake (Python)](Awake/) | Python | Python implementation of the anti-sleep tool |
 
-| 项目 | 语言 | 说明 |
-|------|------|------|
-| [AwakeLite](AwakeLite/) | C# .NET 8 | Windows 防休眠工具，支持定时、托盘、开机自启 |
-| [Awake (Python)](Awake/) | Python | 防休眠工具的 Python 实现版本 |
+### Desktop Games
 
-### 桌面小游戏
+| Project | Language | Description |
+|---------|----------|-------------|
+| [Reaction Game](games/reaction-game/) | Python | 30-second click challenge with combo system |
+| [Dodge Game](games/dodge-game/) | Python | Dodge obstacles, collect coins and shields |
+| [Desktop Cat](games/desktop-cat/) | Python | Animated desktop pet that walks, sleeps, and interacts |
 
-| 项目 | 语言 | 说明 |
-|------|------|------|
-| [Reaction Game](games/reaction-game/) | Python | 30 秒反应力点击挑战 |
-| [Dodge Game](games/dodge-game/) | Python | 躲避障碍物 + 收集金币 |
-| [Desktop Cat](games/desktop-cat/) | Python | 桌面小猫宠物，会散步、睡觉、互动 |
+### Everyday Tools
 
-### 生活工具
+| Project | Language | Description |
+|---------|----------|-------------|
+| [Food Picker](tools/food-picker/) | Python | Suzhou restaurant picker with multi-dimensional filtering |
 
-| 项目 | 语言 | 说明 |
-|------|------|------|
-| [Food Picker](tools/food-picker/) | Python | 苏州餐厅选择器，支持多维度筛选 |
+## Quick Start
 
-## 快速开始
-
-### Python 项目
+### Python Projects
 
 ```bash
-# 运行任意 Python 项目
-python game.py                    # 反应力挑战
-python games/dodge-game/dodge.py  # 躲避游戏
-python games/desktop-cat/desktop_cat.py  # 桌面小猫
-python tools/food-picker/suzhou_food_picker.py  # 餐厅选择器
-python Awake/awake_timer.py       # Python 版防休眠
+python game.py                            # Reaction game
+python games/dodge-game/dodge.py          # Dodge game
+python games/desktop-cat/desktop_cat.py   # Desktop cat
+python tools/food-picker/suzhou_food_picker.py  # Food picker
+python Awake/awake_timer.py               # Anti-sleep (Python)
 ```
 
-Python 项目依赖：
-- 标准库 `tkinter`（Python 自带）
-- `Awake` 额外需要：`pip install pystray pillow`
+Dependencies:
+- `tkinter` (built-in with Python)
+- `Awake` additionally requires: `pip install pystray pillow`
 
-### C# 项目
+### C# Project
 
 ```powershell
 cd AwakeLite
 dotnet run
 ```
 
-需要 .NET 8 SDK。
+Requires .NET 8 SDK.
 
-## 打包发布
+## Building
 
-### Python 项目（PyInstaller）
+### Python (PyInstaller)
 
 ```bash
 pip install pyinstaller
 pyinstaller --onefile --windowed --name AppName script.py
 ```
 
-### C# 项目（单文件发布）
+### C# (Single-file publish)
 
 ```powershell
 dotnet publish -c Release -r win-x64 --self-contained true /p:PublishSingleFile=true
 ```
 
-## 技术要点
+## Technical Highlights
 
-- **Windows API 集成**：`SetThreadExecutionState` 防休眠、注册表开机自启、全局热键注册
-- **系统托盘**：Python `pystray` / C# `NotifyIcon`，支持右键菜单、图标动态切换
-- **自绘 UI**：tkinter Canvas 动画、WinForms 自定义圆角控件（`RoundedPanel`、`RoundedButton`、`ToggleCheckBox`）
-- **游戏循环**：`root.after()` 驱动的帧循环、碰撞检测、难度递增
-- **数据驱动设计**：餐厅选择器使用结构化 JSON 数据 + 多维筛选
+- **Windows API integration** — `SetThreadExecutionState` for sleep prevention, registry-based startup, global hotkey registration
+- **System tray** — Python `pystray` / C# `NotifyIcon` with context menus and dynamic icon switching
+- **Custom UI rendering** — tkinter Canvas animations, WinForms owner-drawn controls (`RoundedPanel`, `RoundedButton`, `ToggleCheckBox`)
+- **Game loop design** — `root.after()`-driven frame loop, AABB collision detection, progressive difficulty
+- **Data-driven architecture** — restaurant picker uses structured JSON data with multi-field filtering
 
-## 项目结构
+## Project Structure
 
 ```
 desktop-toolkit/
-├── AwakeLite/          # C# 防休眠工具
-├── Awake/              # Python 防休眠工具
+├── AwakeLite/          # C# anti-sleep tool
+├── Awake/              # Python anti-sleep tool
 ├── games/
-│   ├── reaction-game/  # 反应力挑战
-│   ├── dodge-game/     # 躲避游戏
-│   └── desktop-cat/    # 桌面小猫
+│   ├── reaction-game/  # Click challenge
+│   ├── dodge-game/     # Dodge game
+│   └── desktop-cat/    # Desktop cat pet
 ├── tools/
-│   └── food-picker/    # 餐厅选择器
-└── docs/               # 文档
+│   └── food-picker/    # Restaurant picker
+└── docs/               # Documentation
 ```
 
 ## License
